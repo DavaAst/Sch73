@@ -1,0 +1,264 @@
+/* hovers */
+
+:root {
+    --coefficient-first: 0;
+    --coefficient-second: 0px;
+    --font-14px: calc(6px + (8 + 8 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-16px: calc(8px + (8 + 8 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-20px: calc(5px + (12 + 12 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-24px: calc(10px + (12 + 12 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-32px: calc(14px + (18 + 18 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-36px: calc(26px + (10 + 10 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+    --font-48px: calc(20px + (28 + 28 * var(--coefficient-first)) * ((100vw - var(--coefficient-second)) / 1680));
+}
+
+@media (hover: hover) {
+
+    .for_enrollee2024>a:hover,
+    .element:hover {
+        background-color: #f3f3f3;
+        outline: 3px solid #d2d2d2;
+        outline-offset: -2px;
+    }
+
+    .topmenu li:hover {
+        background-color: #5fd45f;
+    }
+
+    .topmenu>li:hover .submenu {
+        z-index: 5;
+        opacity: 1;
+    }
+
+    .wrapper>span>button:hover:not(button:nth-child(4)) {
+        color: #fff;
+        background-color: #1db248;
+        transition: .2s ease-in-out;
+    }
+    .social_bunner>span:nth-of-type(2)>span:hover {
+        scale: 1.05;
+    }
+    .more:hover {
+        outline: 1.5px solid #337cbd;
+        outline-offset: -1.5px;
+        transition: .1s ease-in-out;
+    }
+
+    footer>div>span:nth-of-type(4) button:hover {
+        background-color: #3c464d;
+        transition: .2s ease-in-out;
+        outline: 0;
+    }
+
+    .social_bunner>span:nth-of-type(1)>a>div:hover {
+        cursor: pointer;
+        opacity: 80%;
+        transition: .2s ease-in-out;
+    }
+
+    .teachers_list>div:first-of-type:hover,
+    .teachers_list>div:nth-of-type(2):hover {
+        background: url('../img/code/arrows/arrow-back.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .teachers_list>div:first-of-type:hover {
+        transform: scaleX(+1)
+    }
+
+    .teachers_list>div:nth-of-type(2):hover {
+        transform: scaleX(-1)
+    }
+    footer>div:first-of-type>span a:hover{
+        opacity: .6;
+    }
+}
+
+
+@media (hover: none) {
+
+    .for_enrollee2024>a:active,
+    .element:active {
+        background-color: #f3f3f3;
+        outline: 3px solid #d2d2d2;
+        outline-offset: -2px;
+    }
+
+    .topmenu li:active {
+        background-color: #5fd45f;
+    }
+
+    .topmenu>li:active .submenu {
+        opacity: 1;
+        /*not work*/
+        transform: scaleY(1);
+    }
+
+
+    .wrapper>span>button:active:not(button:nth-child(4)) {
+        color: #fff;
+        background-color: #1db248;
+    }
+
+    .more:active {
+        outline: 2px solid #337cbd;
+        outline-offset: -1.5px;
+    }
+
+    footer>div>span:nth-of-type(4) button:active {
+        background-color: #3c464d;
+        outline: 0;
+    }
+
+    .social_bunner>span:nth-of-type(1)>div:active {
+        opacity: 80%;
+    }
+
+    .teachers_list>div:first-of-type:active,
+    .teachers_list>div:nth-of-type(2):active {
+        background: url('../img/code/arrows/arrow-back.png');
+        background-size: 100%;
+    }
+
+    .teachers_list>div:first-of-type:active {
+        transform: scaleX(+1)
+    }
+
+    .teachers_list>div:nth-of-type(2):active {
+        transform: scaleX(-1)
+    }
+
+}
+
+
+
+/*ADAPTIVE*/
+
+@media (max-width: 1400px) {
+    .column {
+        width: 75%;
+    }
+
+    .logo_container,
+    nav,
+    footer {
+        padding-inline: 12.5%;
+    }
+
+    .mySwiper>swiper-slide>div:nth-of-type(2)>div:first-of-type {
+        margin-left: 12.5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .column {
+        width: 80%;
+    }
+
+    .logo_container,
+    nav,
+    footer {
+        padding-inline: 12.5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo_container {
+        padding-block: 2.5%;
+    }
+
+    .for_enrollee2024 {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        padding-inline: 1%;
+    }
+
+    .emoji {
+        width: 12vw;
+    }
+
+    .elem {
+        width: 47%;
+    }
+
+    footer>div>span {
+        margin-bottom: 4%;
+    }
+
+}
+
+/* Small Devices, Tablets */
+
+@media (max-width: 768px) {
+    :root {
+        --coefficient-first: 0.7;
+        --coefficient-second: 320px;
+    }
+
+    .ours_teachers>div:first-of-type {
+        width: auto;
+        height: auto;
+    }
+
+
+
+    .logo_container {
+        padding-block: 4%;
+    }
+
+    .logo_container>div:nth-of-type(2) {
+        display: none;
+    }
+
+    .main_bunner {
+        padding-block: 4%;
+    }
+
+    .ours_teachers {
+        margin-inline: auto;
+        width: 75%;
+        flex-direction: column-reverse;
+    }
+
+    .ours_teachers aside {
+        margin-top: 6%;
+        width: 100%;
+    }
+
+    .ours_teachers>div:first-of-type {
+        top: 0;
+        left: 7%;
+        width: 88%;
+    }
+
+    .foto {
+        position: inherit;
+        right: 0;
+        left: 3.5%;
+        width: 90%;
+        z-index: 1;
+    }
+
+
+    .teachers_list>div:first-of-type,
+    .teachers_list>div:nth-last-of-type(1) {
+        width: 25%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+
+@media (max-width: 480px) {
+    footer>DIV:first-of-type {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Custom, iPhone Retina */
+
+@media (max-width: 415px) {}
